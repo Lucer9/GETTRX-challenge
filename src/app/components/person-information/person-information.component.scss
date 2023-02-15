@@ -1,0 +1,20 @@
+.information-container {
+  margin-top: 16px;
+  width: 100%;
+  padding: 0px 0;
+  min-height: 250px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  gap: 8px;
+
+  .row {
+    display: grid;
+    width: 100%;
+    grid-template-columns: .9fr 1fr;
+    gap: 8px;
+  }
+}

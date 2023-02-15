@@ -1,0 +1,13 @@
+.searchbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    button{
+        right: 5px;
+        position: absolute;
+    }
+
+    input{
+        padding-right: 120px;
+    }
+}

@@ -1,0 +1,23 @@
+.result-box {
+  height: 434px;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  overflow: scroll;
+
+  &.center{
+    display: grid;
+    place-content: center;
+  }
+}
+
+button {
+  display: block;
+  margin: 16px auto;
+  padding: 14px 24px;
+  width: 160px;
+}
+
+.bold{
+  margin-bottom: 55px;
+}

@@ -1,0 +1,31 @@
+.person-container {
+  border-bottom: 1px solid var(--light);
+  padding: 6px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary05);
+  }
+
+  &:focus,
+  &:active,
+  &.active {
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 0px 1px var(--primary);
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+  }
+
+  .code {
+    background-color: var(--primary);
+    color: var(--clear);
+    border-radius: 4px;
+    padding: 8px 12px;
+    min-width: 75px;
+  }
+}
