@@ -15,7 +15,7 @@ export class PeopleService {
   public setSelectedPerson(person: any) {
     this.selectedPerson.next(person);
   }
-  public getSelectedPerson() : Observable<object> {
+  public getSelectedPerson() {
     return this.selectedPerson$;
   }
 

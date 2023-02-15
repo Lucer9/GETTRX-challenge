@@ -21,4 +21,12 @@ describe('ResultsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("should render a 'There are not People' when results are empty", () => {
+    const resultsComponent = fixture.componentInstance
+    const compiled = fixture.nativeElement
+    expect(resultsComponent.results).toBeTruthy()
+    expect(resultsComponent.results).toEqual([])
+    expect(compiled.querySelector(".bold.center").textContent).toContain("There are not People")
+  });
 });

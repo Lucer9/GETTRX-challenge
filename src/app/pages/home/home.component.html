@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="left-side">
       <app-search (search)="searchFor($event)"></app-search>
-      <app-results [results]="results" [loading]="loading" [error]="error"></app-results>
+      <app-results [results]="results | async" [loading]="loading" [error]="error"></app-results>
     </div>
 
     <div class="right-side">

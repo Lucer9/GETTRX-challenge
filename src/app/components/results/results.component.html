@@ -1,12 +1,17 @@
-<div class="result-box" [class.center]="loading || results.length == 0">
-  <app-loader *ngIf="loading"></app-loader>
-  <p class="bold center" *ngIf="results.length == 0 && !loading && !error">There are not People</p>
-  <p class="bold center" *ngIf="results.length == 0 && !loading && error">{{error}}</p>
-  <app-person
-    *ngFor="let person of results; let i = index"
-    (click)="setSelectedPerson(person)"
-    [person]="person"
-    [active]="selectedPerson.url == person.url"
-  ></app-person>
+<div class="result-box" [class.center]="!results || results?.results?.length == 0">
+  <ng-template #loader><app-loader></app-loader></ng-template>
+  <ng-container *ngIf="results; else loader">
+    <p class="bold center" *ngIf="results?.results?.length == 0">
+      There are not People
+    </p>
+    <app-person
+      *ngFor="let person of results.results; let i = index"
+      (click)="setSelectedPerson(person)"
+      [person]="person"
+      [active]="selectedPerson.url == person.url">
+    </app-person>
+  </ng-container>
 </div>
-<button (click)="viewSelectedPerson()" [class.disabled]="!selectedPerson.url">View</button>
+<button (click)="viewSelectedPerson()" [class.disabled]="!selectedPerson.url">
+  View
+</button>
