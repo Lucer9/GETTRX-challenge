@@ -21,4 +21,13 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // describe('#SearchFor', () => {
+  //   it('should load 82 people when empty searchFor(term:string)', () => {
+  //     component.searchFor('');
+  //     component.results.subscribe((results) => {
+  //       return expect(results.count).toBe(10);
+  //     });
+  //   });
+  // });
 });

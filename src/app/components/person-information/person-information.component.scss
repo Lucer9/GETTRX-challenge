@@ -14,7 +14,20 @@
   .row {
     display: grid;
     width: 100%;
-    grid-template-columns: .9fr 1fr;
+    grid-template-columns: 0.9fr 1fr;
     gap: 8px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .information-container {
+    padding: 16px;
+    .row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .right {
+    text-align: left;
   }
 }

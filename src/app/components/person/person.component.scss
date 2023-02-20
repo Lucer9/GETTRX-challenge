@@ -29,3 +29,18 @@
     min-width: 75px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .person-container {
+    .code {
+      margin-top: 8px;
+    }
+    .row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .right {
+    text-align: left;
+  }
+}

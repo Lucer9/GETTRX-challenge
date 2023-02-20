@@ -1,13 +1,28 @@
-.searchbar{
-    position: relative;
-    display: flex;
-    align-items: center;
-    button{
-        right: 5px;
-        position: absolute;
-    }
+.searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  button {
+    right: 5px;
+    position: absolute;
+  }
 
-    input{
-        padding-right: 120px;
+  input {
+    padding-right: 120px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .searchbar {
+    display: block;
+    button{
+        margin-top: 12px;
+        width: 100%;
+        right: unset;
+        position: relative;
     }
+    input {
+      padding-right: unset;
+    }
+  }
 }

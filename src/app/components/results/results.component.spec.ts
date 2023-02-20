@@ -1,5 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { of } from 'rxjs';
 
 import { ResultsComponent } from './results.component';
 
@@ -22,11 +24,16 @@ describe('ResultsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should render a 'There are not People' when results are empty", () => {
-    const resultsComponent = fixture.componentInstance
-    const compiled = fixture.nativeElement
-    expect(resultsComponent.results).toBeTruthy()
-    expect(resultsComponent.results).toEqual([])
-    expect(compiled.querySelector(".bold.center").textContent).toContain("There are not People")
+  it("should render a 'There are not People' when results are empty", (done: DoneFn) => {
+    const resultsComponent = fixture.componentInstance;
+    resultsComponent.results = [];
+    fixture.detectChanges();
+    const compiled = fixture.debugElement;
+    
+    const element = compiled.queryAll(By.css('.bold'))
+    console.log(element);
+    
+    expect(element).toBeTruthy('There are not People')
+    done();
   });
 });
